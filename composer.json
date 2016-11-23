@@ -1,0 +1,27 @@
+{
+  "name": "digitalpianism/changepassword",
+  "description": "A small module to be able to change customer password via the console in Magento 2",
+  "type": "magento2-module",
+  "version": "0.0.1",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "require": {
+    "php": "~5.5.0|~5.6.0|~7.0.0"
+  },
+  "authors": [
+    {
+      "name": "Raphael Petrini",
+      "email": "contact@digital-pianism.com",
+      "homepage": "https://www.digital-pianism.com/",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "files": [ "registration.php" ],
+    "psr-4": {
+      "DigitalPianism\\ChangePassword\\": ""
+    }
+  }
+}
