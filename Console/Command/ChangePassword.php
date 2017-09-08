@@ -100,7 +100,9 @@ class ChangePassword extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $this->_appState->setAreaCode('adminhtml');
+        if (!$this->_appState->getAreaCode()) {
+            $this->_appState->setAreaCode('adminhtml');
+        }
         $errors = $this->validate($input);
         if ($errors) {
             $output->writeln('<error>' . implode('</error>' . PHP_EOL .  '<error>', $errors) . '</error>');
